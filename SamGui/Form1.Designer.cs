@@ -28,46 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.customSliderLeft1 = new SamGui.CustomSliderLeft();
             this.SuspendLayout();
             // 
-            // trackBar1
+            // menuStrip1
             // 
-            this.trackBar1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.trackBar1.Location = new System.Drawing.Point(118, 12);
-            this.trackBar1.Maximum = 180;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 416);
-            this.trackBar1.TabIndex = 0;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(990, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // trackBar2
+            // customSliderLeft1
             // 
-            this.trackBar2.Location = new System.Drawing.Point(355, 12);
-            this.trackBar2.Maximum = 180;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar2.Size = new System.Drawing.Size(45, 416);
-            this.trackBar2.TabIndex = 1;
-            this.trackBar2.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            this.customSliderLeft1.Location = new System.Drawing.Point(126, 0);
+            this.customSliderLeft1.Name = "customSliderLeft1";
+            this.customSliderLeft1.Size = new System.Drawing.Size(760, 683);
+            this.customSliderLeft1.TabIndex = 0;
+            this.customSliderLeft1.Text = "customSliderLeft1";
+            this.customSliderLeft1.TMBsize = 50;
+            this.customSliderLeft1.ScrollLeft += new System.Windows.Forms.ScrollEventHandler(this.customSliderLeft1_ScrollLeft);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 458);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.trackBar1);
+            this.ClientSize = new System.Drawing.Size(990, 737);
+            this.Controls.Add(this.customSliderLeft1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,8 +64,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.TrackBar trackBar2;
+        private CustomSliderLeft customSliderLeft1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+
+
+
+
+
     }
 }
 

@@ -1,1 +1,12 @@
 C:\Users\Edward\Desktop\SamGui\SamGui\SamGui\bin\Debug\SamGui.exe.config
+C:\Users\user\Desktop\SamGUI\SamGui\obj\Debug\SamGui.Form1.resources
+C:\Users\user\Desktop\SamGUI\SamGui\obj\Debug\SamGui.Properties.Resources.resources
+C:\Users\user\Desktop\SamGUI\SamGui\obj\Debug\SamGui.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\SamGUI\SamGui\obj\Debug\SamGui.exe
+C:\Users\user\Desktop\SamGUI\SamGui\obj\Debug\SamGui.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\SamGui.exe.config
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\SamGui.exe
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\SamGui.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\ColorSlider.dll
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\ColorSlider.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\obj\Debug\SamGui.csprojResolveAssemblyReference.cache

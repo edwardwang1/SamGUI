@@ -1,0 +1,7 @@
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\bin\Release\ColorSlider.dll
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\bin\Release\ColorSlider.pdb
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Release\ColorSlider.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Release\MB.Controls.ColorSlider.resources
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Release\ColorSlider.csproj.GenerateResource.Cache
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Release\ColorSlider.dll
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Release\ColorSlider.pdb

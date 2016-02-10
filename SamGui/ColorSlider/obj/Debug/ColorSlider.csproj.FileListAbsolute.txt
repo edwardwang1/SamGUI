@@ -1,0 +1,15 @@
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\bin\Debug\ColorSlider.dll
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\bin\Debug\ColorSlider.pdb
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Debug\MB.Controls.ColorSlider.resources
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Debug\ColorSlider.csproj.GenerateResource.Cache
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Debug\ColorSlider.dll
+C:\Users\user\Downloads\ColorSlider\ColorSlider\ColorSlider\obj\Debug\ColorSlider.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\bin\Debug\ColorSlider.dll
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\bin\Debug\ColorSlider.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\obj\Debug\MB.Controls.ColorSlider.resources
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\obj\Debug\ColorSlider.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\obj\Debug\ColorSlider.dll
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\obj\Debug\ColorSlider.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\ColorSlider.dll
+C:\Users\user\Desktop\SamGUI\SamGui\bin\Debug\ColorSlider.pdb
+C:\Users\user\Desktop\SamGUI\SamGui\ColorSlider\obj\Debug\ColorSlider.csprojResolveAssemblyReference.cache
