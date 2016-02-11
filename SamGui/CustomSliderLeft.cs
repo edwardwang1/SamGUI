@@ -17,6 +17,7 @@ namespace SamGui
     public partial class CustomSliderLeft : Control
     {
 
+    
         #region Events
 
         /// <summary>
@@ -271,6 +272,7 @@ namespace SamGui
         /// <param name="e">The <see cref="T:System.Windows.Forms.PaintEventArgs"/> instance containing the event data.</param>
         protected override void OnPaint(PaintEventArgs e)
         {
+            DoubleBuffered = true;
             try
             {
                 //Setting up SlidersBackgrounds
@@ -319,7 +321,63 @@ namespace SamGui
             if (e.KeyCode == Keys.S) { isS = true; }
             if (e.KeyCode == Keys.I) { isI = true; }
             if (e.KeyCode == Keys.K) { isK = true; }
+            MoveThumb();
 
+
+            if (ScrollLeft != null && ValueLeft == barMinimumLeft) ScrollLeft(this, new ScrollEventArgs(ScrollEventType.First, ValueLeft));
+            if (ScrollLeft != null && ValueLeft == barMaximumLeft) ScrollLeft(this, new ScrollEventArgs(ScrollEventType.Last, ValueLeft));
+            if (ScrollRight != null && ValueRight == barMinimumRight) ScrollRight(this, new ScrollEventArgs(ScrollEventType.First, ValueRight));
+            if (ScrollRight != null && ValueRight == barMaximumRight) ScrollRight(this, new ScrollEventArgs(ScrollEventType.Last, ValueRight));
+            //Invalidate();
+        }
+        protected override void OnKeyUp(KeyEventArgs e)
+        {
+            base.OnKeyUp(e);        
+            if (e.KeyCode == Keys.W) { isW = false; }
+            if (e.KeyCode == Keys.S) { isS = false; }
+            if (e.KeyCode == Keys.I) { isI = false; }
+            if (e.KeyCode == Keys.K) { isK = false; }
+            MoveThumb();
+        }
+
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.GotFocus"></see> event.
+        /// </summary>
+        /// <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        protected override void OnGotFocus(EventArgs e)
+        {
+            base.OnGotFocus(e);
+            Invalidate();
+        }
+
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.LostFocus"></see> event.
+        /// </summary>
+        /// <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+            Invalidate();
+        }
+        
+        #endregion
+
+        #region Help Routines
+        public void SetProperValueLeft(int val)
+        {
+            if (val < barMinimumLeft) ValueLeft = barMinimumLeft;
+            else if (val > barMaximumLeft) ValueLeft = barMaximumLeft;
+            else ValueLeft = val;
+        }
+        public void SetProperValueRight(int val)
+        {
+            if (val < barMinimumRight) ValueRight = barMinimumRight;
+            else if (val > barMaximumRight) ValueRight = barMaximumRight;
+            else ValueRight = val;
+        }
+
+        public void MoveThumb ()
+        {
             if (isW && isI)
             {
                 SetProperValueLeft(ValueLeft - 5);
@@ -368,75 +426,6 @@ namespace SamGui
                 SetProperValueRight(ValueRight + 5);
                 if (ScrollRight != null) ScrollRight(this, new ScrollEventArgs(ScrollEventType.SmallIncrement, ValueRight));
             }
-            /*switch (e.KeyCode)
-            {
-                case Keys.W:
-                    SetProperValueLeft(ValueLeft - 5);
-                    if (ScrollLeft != null) ScrollLeft(this, new ScrollEventArgs(ScrollEventType.SmallDecrement, ValueLeft));
-                    break;
-                case Keys.S:
-                    SetProperValueLeft(ValueLeft + 5);
-                    if (ScrollLeft != null) ScrollLeft(this, new ScrollEventArgs(ScrollEventType.SmallIncrement, ValueLeft));
-                    break;
-                case Keys.I:
-                    SetProperValueRight(ValueRight - 5);
-                    if (ScrollRight != null) ScrollRight(this, new ScrollEventArgs(ScrollEventType.SmallDecrement, ValueRight));
-                    break;
-                case Keys.K:
-                    SetProperValueRight(ValueRight + 5);
-                    if (ScrollRight != null) ScrollRight(this, new ScrollEventArgs(ScrollEventType.SmallIncrement, ValueRight));
-                    break;
-
-            }*/
-            if (ScrollLeft != null && ValueLeft == barMinimumLeft) ScrollLeft(this, new ScrollEventArgs(ScrollEventType.First, ValueLeft));
-            if (ScrollLeft != null && ValueLeft == barMaximumLeft) ScrollLeft(this, new ScrollEventArgs(ScrollEventType.Last, ValueLeft));
-            if (ScrollRight != null && ValueRight == barMinimumRight) ScrollRight(this, new ScrollEventArgs(ScrollEventType.First, ValueRight));
-            if (ScrollRight != null && ValueRight == barMaximumRight) ScrollRight(this, new ScrollEventArgs(ScrollEventType.Last, ValueRight));
-            //Invalidate();
-        }
-        protected override void OnKeyUp(KeyEventArgs e)
-        {
-            base.OnKeyUp(e);        
-            if (e.KeyCode == Keys.W) { isW = false; }
-            if (e.KeyCode == Keys.S) { isS = false; }
-            if (e.KeyCode == Keys.I) { isI = false; }
-            if (e.KeyCode == Keys.K) { isK = false; }
-        }
-
-        /// <summary>
-        /// Raises the <see cref="E:System.Windows.Forms.Control.GotFocus"></see> event.
-        /// </summary>
-        /// <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
-        protected override void OnGotFocus(EventArgs e)
-        {
-            base.OnGotFocus(e);
-            Invalidate();
-        }
-
-        /// <summary>
-        /// Raises the <see cref="E:System.Windows.Forms.Control.LostFocus"></see> event.
-        /// </summary>
-        /// <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
-        protected override void OnLostFocus(EventArgs e)
-        {
-            base.OnLostFocus(e);
-            Invalidate();
-        }
-        
-        #endregion
-
-        #region Help Routines
-        public void SetProperValueLeft(int val)
-        {
-            if (val < barMinimumLeft) ValueLeft = barMinimumLeft;
-            else if (val > barMaximumLeft) ValueLeft = barMaximumLeft;
-            else ValueLeft = val;
-        }
-        public void SetProperValueRight(int val)
-        {
-            if (val < barMinimumRight) ValueRight = barMinimumRight;
-            else if (val > barMaximumRight) ValueRight = barMaximumRight;
-            else ValueRight = val;
         }
         #endregion
     }
